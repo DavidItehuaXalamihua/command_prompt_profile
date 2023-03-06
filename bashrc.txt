@@ -318,5 +318,3 @@ eval "$(oh-my-posh init bash --config ~/.poshthemes/marcduiker.omp.json)"
 
 #inicio de fish para autocompletar palabras
 #fish
-
-echo "pruebas de aplicacion de cambios"
