@@ -152,7 +152,9 @@ function profile-backup(){
     cd "/home/dix/Desktop/.bashrc_backups"
     cat "/home/dix/.bashrc" | tee "/home/dix/Desktop/.bashrc_backups/bashrc.txt">/dev/null
     cat "/home/dix/.inputrc" | tee "/home/dix/Desktop/.bashrc_backups/inputrc.txt">/dev/null
+    echo $t
     bash push.sh
+    echo $t
     cd $t
 }
 
