@@ -285,9 +285,11 @@ function for-loop(){
 }
 
 function cierre_bmv(){
+    t="$(pwd)"
     cd /home/dix/Desktop/.BMV/
     python3 main.py
     bash push.sh
+    cd $t
 }
 
 #function help-git(){}
