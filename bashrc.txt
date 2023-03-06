@@ -148,7 +148,7 @@ function profile-edit(){
 }
 
 function profile-backup(){
-    t="${pwd}"
+    t="$(pwd)"
     cd "/home/dix/Desktop/.bashrc_backups"
     cat "/home/dix/.bashrc" | tee "/home/dix/Desktop/.bashrc_backups/bashrc.txt">/dev/null
     cat "/home/dix/.inputrc" | tee "/home/dix/Desktop/.bashrc_backups/inputrc.txt">/dev/null
