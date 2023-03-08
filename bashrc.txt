@@ -143,8 +143,10 @@ alias ls="ls -l"
 #funciones de David
 
 function profile-edit(){
+    t="$(pwd)"
     cd $home
     code .bashrc
+    cd $t
 }
 
 function profile-backup(){
@@ -289,6 +291,13 @@ function cierre_bmv(){
     cd /home/dix/Desktop/.BMV/
     python3 main.py
     bash push.sh
+    cd $t
+}
+
+function work-sites(){
+    t="$(pwd)"
+    cd /home/dix/Desktop/.scripts/
+    bash work-sites.sh
     cd $t
 }
 
