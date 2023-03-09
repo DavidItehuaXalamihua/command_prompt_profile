@@ -129,7 +129,7 @@ bind "TAB:menu-complete"
 desktop="/home/dix/Desktop"
 dix="/home/dix"
 downloads="/home/dix/Downloads"
-scripts="/home/dix/dix_scripts"
+scripts="/home/dix/Desktop/.scripts"
 poshthemes="/home/dix/.poshthemes"
 
 # para escribir en la siguiente linea
