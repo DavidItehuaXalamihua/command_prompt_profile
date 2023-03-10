@@ -286,6 +286,13 @@ function for-loop(){
     
 }
 
+function upgrade(){
+    t="$(pwd)"
+    cd $scripts
+    sudo bash upgrade.sh
+    cd $t
+}
+
 function cierre_bmv(){
     t="$(pwd)"
     cd /home/dix/Desktop/.BMV/
