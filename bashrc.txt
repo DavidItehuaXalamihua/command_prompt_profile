@@ -301,6 +301,13 @@ function cierre_bmv(){
     cd $t
 }
 
+function usb_remotly(){
+    t="$(pwd)"
+    cd /home/dix/Desktop/.scripts
+    bash usb_remotly.sh
+    cd $t
+}
+
 function work-sites(){
     t="$(pwd)"
     cd /home/dix/Desktop/.scripts/
