@@ -126,11 +126,11 @@ bind 'set completion-ignore-case on'
 bind "TAB:menu-complete"
 
 #inicio de las variables de David
-desktop="/home/dix/Desktop"
-dix="/home/dix"
-downloads="/home/dix/Downloads"
-scripts="/home/dix/Desktop/.scripts"
-poshthemes="/home/dix/.poshthemes"
+user=$(whoami)
+desktop="/home/$user/Desktop"
+downloads="/home/$user/Downloads"
+scripts="/home/$user/Desktop/.scripts"
+poshthemes="/home/$user/.poshthemes"
 
 # para escribir en la siguiente linea
 PS1="\W \n> "
@@ -151,15 +151,15 @@ function profile-edit(){
 
 function profile-backup(){
     t="$(pwd)"
-    cd "/home/dix/Desktop/.bashrc_backups"
-    cat "/home/dix/.bashrc" | tee "/home/dix/Desktop/.bashrc_backups/bashrc.txt">/dev/null
-    cat "/home/dix/.inputrc" | tee "/home/dix/Desktop/.bashrc_backups/inputrc.txt">/dev/null
+    cd "/home/$user/Desktop/.bashrc_backups"
+    cat "/home/$user/.bashrc" | tee "/home/$user/Desktop/.bashrc_backups/bashrc.txt">/dev/null
+    cat "/home/$user/.inputrc" | tee "/home/$user/Desktop/.bashrc_backups/inputrc.txt">/dev/null
     bash push.sh
     cd $t
 }
 
 function profile-help (){
-	echo "cd /home/user"
+	echo "cd /home/$user"
 	echo "Opc 1) sudo nano .bashrc"
     echo "Opc 2) code .bashrc"
 }
@@ -295,7 +295,7 @@ function upgrade(){
 
 function cierre_bmv(){
     t="$(pwd)"
-    cd /home/dix/Desktop/.BMV/
+    cd /home/$user/Desktop/.BMV/
     python3 main.py
     bash push.sh
     cd $t
@@ -303,14 +303,14 @@ function cierre_bmv(){
 
 function usb_remotly(){
     t="$(pwd)"
-    cd /home/dix/Desktop/.scripts
+    cd /home/$user/Desktop/.scripts
     bash usb_remotly.sh
     cd $t
 }
 
 function work-sites(){
     t="$(pwd)"
-    cd /home/dix/Desktop/.scripts/
+    cd /home/$user/Desktop/.scripts/
     bash work-sites.sh
     cd $t
 }
@@ -320,7 +320,7 @@ function work-sites(){
 #iniciar neofetch
 neofetch
 
-cd /home/dix/Desktop
+cd /home/$user/Desktop
 
 #iniciar  el tema de oh-my-posh
 #set theme bash tutorial: https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/
